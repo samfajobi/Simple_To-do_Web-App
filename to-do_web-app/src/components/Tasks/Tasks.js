@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SearchIcon from '@material-ui/icons/Search';
+import AddIcon from '@material-ui/icons/Add';
 
 
 const Container = styled.div`
@@ -44,7 +45,7 @@ const Center = styled.div`
 
 `
 const ImgContainer = styled.div`
-  margin-right: 50px;
+  margin-right: 160px;
   margin-top: 50px;
 `
 
@@ -142,9 +143,66 @@ const TitleHeader = styled.div`
   display: flex;
  
 `
-const Title = styled.div``
+
+const CreateTodo = styled.div`
+  width: 260px;
+  height: 30px;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  background-color:  #ECF3F3;
+`
+const Todos = styled.div`
+  position: absolute;
+  width: 260px;
+  height: 140px;
+  border-radius: 10px;
+  top: 110px;
+  left: 20px;
+  background-color: #FEFEFE;;
+`
+const Todo = styled.div``
+const TodoTitle = styled.div`
+   position: absolute;
+   left: 12px;
+   font-weight: 500;
+   font-size: 14px;
+
+`
+const TodoDescription = styled.div`
+  position: absolute;
+  left: 12px;
+  width: 240px;
+`
+const TodoImage = styled.div``
+const TodoImg = styled.img``
+
+const CreateIcon = styled.div`
+  position: absolute;
+  left: 115px;
+  top: 2px;
+
+`
+
+const Title = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  
+`
 const TodoNo = styled.div`
-  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 40px;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: 220px;
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: aqua;
+
 
 `
 const InProgressSection = styled.div`
@@ -152,18 +210,20 @@ const InProgressSection = styled.div`
   background: #F5F9F9;
   border-radius: 15px;
   top: 200px;
-  left: 95px;
+  left: 395px;
   width: 300px;
   height: 500px;
+ 
 `
 const CompletedSection = styled.div`
   position: absolute;
   background: #F5F9F9;
   border-radius: 15px;
   top: 200px;
-  left: 45px;
+  left: 750px;
   width: 300px;
   height: 500px;
+ 
 `
 
 
@@ -232,15 +292,56 @@ const Tasks = () => {
             <Title>To do</Title>
             <TodoNo>2</TodoNo>
           </TitleHeader>
+          <CreateTodo>
+            <CreateIcon>
+              <AddIcon />
+            </CreateIcon>
+          </CreateTodo>
+
+          <Todos>
+            <Todo>
+              <TodoTitle>Design- App </TodoTitle>
+              <TodoDescription>
+                Modifying Career,  Scholarship and entrance exam Acc to new design pattern
+
+              </TodoDescription>
+              <TodoImage>
+                <TodoImg />
+              </TodoImage>
+
+            </Todo>
+            <Todo>
+
+            </Todo>
+
+          </Todos>
+
         </TodoSection>
 
 
         <InProgressSection>
+         <TitleHeader>
+            <Title>In Progress</Title>
+            <TodoNo>1</TodoNo>
+          </TitleHeader>
+          <CreateTodo>
+            <CreateIcon>
+              <AddIcon />
+            </CreateIcon>
+          </CreateTodo>
 
         </InProgressSection>
 
         <CompletedSection>
-
+          <TitleHeader>
+            <Title>Completed</Title>
+            <TodoNo>0</TodoNo>
+          </TitleHeader>
+          <CreateTodo>
+            <CreateIcon>
+              <AddIcon />
+            </CreateIcon>
+          </CreateTodo>
         </CompletedSection>
         
       </SectionTasks>
