@@ -275,7 +275,7 @@ const Tasks = () => {
         <Section2>
           <LowDivs>
             <LowDiv> <SettingsOutlinedIcon /> Settings</LowDiv>
-            <LowDiv><i class="fa fa-sign-out" aria-hidden="true">   </i> Log Out</LowDiv>
+            <LowDiv> <i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</LowDiv>
           </LowDivs>
         </Section2>
 
@@ -312,7 +312,7 @@ const Tasks = () => {
         <ShowSection>
           <ShowDivs>
             <ShowDiv type="proj" >Projects</ShowDiv>
-            <ShowDiv type="filter" ><i class="fa fa-filter" aria-hidden="true"></i> Filter</ShowDiv>
+            <ShowDiv type="filter" >Filter</ShowDiv>
           </ShowDivs>
         </ShowSection>
 
