@@ -145,10 +145,26 @@ const TitleHeader = styled.div`
 const Title = styled.div``
 const TodoNo = styled.div`
   margin-left: 50px;
-  
+
 `
-const InProgressSection = styled.div``
-const CompletedSection = styled.div``
+const InProgressSection = styled.div`
+  position: absolute;
+  background: #F5F9F9;
+  border-radius: 15px;
+  top: 200px;
+  left: 95px;
+  width: 300px;
+  height: 500px;
+`
+const CompletedSection = styled.div`
+  position: absolute;
+  background: #F5F9F9;
+  border-radius: 15px;
+  top: 200px;
+  left: 45px;
+  width: 300px;
+  height: 500px;
+`
 
 
 const Tasks = () => {
