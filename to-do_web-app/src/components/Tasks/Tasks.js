@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import SearchIcon from '@material-ui/icons/Search';
 import AddIcon from '@material-ui/icons/Add';
+import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+import HomeIcon from '@material-ui/icons/Home';
+import EqualizerIcon from '@material-ui/icons/Equalizer';
+import TodayIcon from '@material-ui/icons/Today';
+import SmsOutlinedIcon from '@material-ui/icons/SmsOutlined';
+import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
+import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 
 
 const Container = styled.div`
@@ -137,7 +144,7 @@ const TodoSection = styled.div`
   top: 200px;
   left: 45px;
   width: 300px;
-  height: 500px;
+  height: 550px;
 `
 const TitleHeader = styled.div` 
   display: flex;
@@ -155,7 +162,7 @@ const CreateTodo = styled.div`
 const Todos = styled.div`
   position: absolute;
   width: 260px;
-  height: 140px;
+  height: 160px;
   border-radius: 10px;
   top: 110px;
   left: 20px;
@@ -164,6 +171,7 @@ const Todos = styled.div`
 const Todo = styled.div``
 const TodoTitle = styled.div`
    position: absolute;
+   top: 10px;
    left: 12px;
    font-weight: 500;
    font-size: 14px;
@@ -171,11 +179,32 @@ const TodoTitle = styled.div`
 `
 const TodoDescription = styled.div`
   position: absolute;
+  font-size: 15px;
+  top: 38px;
   left: 12px;
   width: 240px;
 `
+const TodoInfo = styled.div`
+  display: flex;
+`
 const TodoImage = styled.div``
-const TodoImg = styled.img``
+const TodoImg = styled.img`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 120px;
+  left: 13px;
+`
+
+const TodoMsg = styled.div`
+  display: flex;
+  position: absolute;
+  top: 125px;
+  left: 210px;
+`
+const TodoMsgIcon = styled.div``
+const MsgNo = styled.div``
 
 const CreateIcon = styled.div`
   position: absolute;
@@ -235,18 +264,18 @@ const Tasks = () => {
 
         <Section1>
           <Divs>
-            <Div>Oveview</Div>
-            <Div>Stats</Div>
-            <Div>Projects</Div>
-            <Div>Chat</Div>
-            <Div>Calendar</Div>
-          </Divs>
+            <Div><HomeIcon /> Oveview</Div>
+            <Div> <EqualizerIcon /> Stats</Div>
+            <Div> <DescriptionOutlinedIcon /> Projects</Div>
+            <Div> <SmsOutlinedIcon /> Chat</Div>
+            <Div> <TodayIcon /> Calendar</Div>
+          </Divs> 
         </Section1>
 
         <Section2>
           <LowDivs>
-            <LowDiv>Settings</LowDiv>
-            <LowDiv>Log Out</LowDiv>
+            <LowDiv> <SettingsOutlinedIcon /> Settings</LowDiv>
+            <LowDiv> <i className="fa fa-sign-out" aria-hidden="true"></i>Log Out</LowDiv>
           </LowDivs>
         </Section2>
 
@@ -303,16 +332,20 @@ const Tasks = () => {
               <TodoTitle>Design- App </TodoTitle>
               <TodoDescription>
                 Modifying Career,  Scholarship and entrance exam Acc to new design pattern
-
               </TodoDescription>
-              <TodoImage>
-                <TodoImg />
-              </TodoImage>
+              <TodoInfo>
+                <TodoImage>
+                 <TodoImg  src="./Group.png"/>
+                </TodoImage>
+                <TodoMsg>
+                  <MsgNo>1</MsgNo>
+                  <TodoMsgIcon>< ChatBubbleOutlineIcon /></TodoMsgIcon>
+                </TodoMsg>
+              </TodoInfo>
+             
 
             </Todo>
-            <Todo>
-
-            </Todo>
+            
 
           </Todos>
 
