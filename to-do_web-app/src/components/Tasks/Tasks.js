@@ -81,8 +81,9 @@ const ShowDivs = styled.div`
 const ShowDiv = styled.div`
   position: absolute;
   top: 150px;
-  left: ${props => props.type === 'filter' && '1010px'};
+  left: ${props => props.type === 'filter' && '975px'};
   left: ${props => props.type === 'proj' && '48px'};
+  display: ${props => props.type === 'filter' &&  'flex'};
   
 `
 
@@ -107,14 +108,31 @@ const Sections = styled.div`
   
 `
 const H2 = styled.h2`
+  font-size: 20px;
+  width: 70px;
+  font-weight: 600;
+  line-height: 100%;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  color: #161616;
   position: absolute;
-  left: 40px;
+  left: 60px;
   top: 25px;
   height: 20px;
   
 `
 
 const Section1 = styled.div``
+
+const Icon = styled.div`
+  margin-right: 19px;
+  margin-right: ${props => props.type === 'filter' &&  '8px'};
+  margin-right: ${props => props.type === 'search' &&  '8px'};
+  
+`
+const IconImg = styled.img`
+  
+`
 
 const Divs = styled.div`
   position: absolute;
@@ -123,6 +141,7 @@ const Divs = styled.div`
 `
 const Div = styled.div`
   margin-bottom: 20px;
+  display: flex;
 `
 
 const Section2 = styled.div`
@@ -132,10 +151,14 @@ const Section2 = styled.div`
 
 `
 
-const LowDivs = styled.div``
+const LowDivs = styled.div`
+  
+  
+`
 
 const LowDiv = styled.div`
   margin-top: 20px;
+  display: flex;
 `
 const TodoSection = styled.div`
   position: absolute;
@@ -264,18 +287,18 @@ const Tasks = () => {
 
         <Section1>
           <Divs>
-            <Div><HomeIcon /> Oveview</Div>
-            <Div> <EqualizerIcon /> Stats</Div>
-            <Div> <DescriptionOutlinedIcon /> Projects</Div>
-            <Div> <SmsOutlinedIcon /> Chat</Div>
-            <Div> <TodayIcon /> Calendar</Div>
+            <Div><Icon><IconImg src="./Home.png" alt="" /></Icon> Oveview</Div>
+            <Div><Icon><IconImg src="./graph.png" alt="" /></Icon>Stats</Div>
+            <Div><Icon><IconImg src="./Vector.png" alt="" /></Icon>Projects</Div>
+            <Div><Icon><IconImg src="./Group1.png" alt="" /></Icon> Chat</Div>
+            <Div><Icon><IconImg src="./calendar.png" alt="" /></Icon>Calendar</Div>
           </Divs> 
         </Section1>
 
         <Section2>
           <LowDivs>
-            <LowDiv> <SettingsOutlinedIcon /> Settings</LowDiv>
-            <LowDiv><i class="fa fa-sign-out" aria-hidden="true">   </i> Log Out</LowDiv>
+            <LowDiv><Icon><IconImg src="./setting.png" alt="" /></Icon>Settings</LowDiv>
+            <LowDiv><Icon><IconImg src="./Logout.png" alt="" /></Icon>Log Out</LowDiv>
           </LowDivs>
         </Section2>
 
@@ -286,7 +309,7 @@ const Tasks = () => {
       <SectionTasks>
         <Left>
             <SearchContainer>
-                <SearchIcon />
+            <Icon type="search"><IconImg src="./search.png" alt="" /></Icon>
                 <Input placeholder="Search"/>
             </SearchContainer>
             
@@ -312,7 +335,7 @@ const Tasks = () => {
         <ShowSection>
           <ShowDivs>
             <ShowDiv type="proj" >Projects</ShowDiv>
-            <ShowDiv type="filter" ><i class="fa fa-filter" aria-hidden="true"></i> Filter</ShowDiv>
+            <ShowDiv type="filter" ><Icon type="filter"><IconImg  src="./filter.png" alt="" /></Icon>Filter</ShowDiv>
           </ShowDivs>
         </ShowSection>
 
@@ -323,7 +346,7 @@ const Tasks = () => {
           </TitleHeader>
           <CreateTodo>
             <CreateIcon>
-              <AddIcon />
+            <Icon type="filter"><IconImg  src="./plus.png" alt="" /></Icon>
             </CreateIcon>
           </CreateTodo>
 
@@ -359,7 +382,7 @@ const Tasks = () => {
           </TitleHeader>
           <CreateTodo>
             <CreateIcon>
-              <AddIcon />
+            <Icon type="filter"><IconImg  src="./plus.png" alt="" /></Icon>
             </CreateIcon>
           </CreateTodo>
 
@@ -372,7 +395,7 @@ const Tasks = () => {
           </TitleHeader>
           <CreateTodo>
             <CreateIcon>
-              <AddIcon />
+            <Icon type="filter"><IconImg  src="./plus.png" alt="" /></Icon>
             </CreateIcon>
           </CreateTodo>
         </CompletedSection>
